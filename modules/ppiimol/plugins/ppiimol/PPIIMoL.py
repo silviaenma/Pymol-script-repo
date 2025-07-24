@@ -34,6 +34,17 @@ Note:
 - This script was originally written in Spanish for internal lab use, but has been translated for the PyMOL community.
 """
 
+def __init_plugin__(app=None):
+    """
+    PyMOL plugin loader function. Called when the plugin is loaded from the Plugin Manager.
+    """
+    try:
+        from tkinter import messagebox
+        messagebox.showinfo("PPIIMoL", "PPIIMoL plugin loaded successfully.")
+    except ImportError:
+        print("PPIIMoL plugin loaded (no GUI message shown, Tkinter not available).")
+
+        
 from pymol import cmd, stored
 import tkinter as tk
 import math
