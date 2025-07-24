@@ -1,3 +1,39 @@
+"""
+PPIIMoL - PPII Helix Detector for PyMOL
+---------------------------------------
+
+This PyMOL plugin detects polyproline II (PPII) helices in protein structures using dihedral angles (phi/psi)
+and helps visualize relevant interactions with non-canonical hydrogen bonds.
+
+Main Features:
+- Load PDB files or fetch proteins by ID.
+- Calculate phi/psi angles for backbone atoms.
+- Automatically identify candidate PPII helices.
+- Visualize key atom distances and angles (CA–H–O).
+- Export CSV and PDB reports of detected segments.
+- User-friendly interface with Tkinter.
+
+Usage:
+- Run this script from PyMOL: `run PPIIMoL.py`
+- Launch the GUI with: `lanzar_interfaz()`
+- Alternatively, use core functions like: `detectar_segmentos_ppii("your_object")`
+
+Dependencies:
+- PyMOL with Python support
+- Python 3.x
+- Tkinter
+
+Authors:
+- Silvia Enma (2025), Instituto de Química-Física "Blas Cabrera" (CSIC)
+- GitHub: https://github.com/silviaenma/ppii-detector-pymol
+
+License:
+- GNU GPL v3
+
+Note:
+- This script was originally written in Spanish for internal lab use, but has been translated for the PyMOL community.
+"""
+
 from pymol import cmd, stored
 import tkinter as tk
 import math
